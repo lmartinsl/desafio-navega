@@ -11,5 +11,6 @@ export class FillButtonDirective {
     _eleRef.nativeElement.style.fontWeight = 'bold';
     _eleRef.nativeElement.style.backgroundColor = '#1aaab2';
     _eleRef.nativeElement.style.border = 'none';
+    _eleRef.nativeElement.style.color = '#ffff';
   }
 }

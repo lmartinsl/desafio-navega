@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 10rem;
+  padding: 0px 8rem;
   background-color: #21232a;
   color: #fff;
   height: 80px;
@@ -25,6 +25,10 @@
     display: flex;
     align-items: center;
     column-gap: 18px;
+
+    i {
+      cursor: pointer;
+    }
   }
 }
 

@@ -1,0 +1,26 @@
+@import "../../../shared/theme/default-styles.scss";
+
+.sidenav {
+  display: flex;
+  justify-content: space-between;
+  width: 20rem;
+  color: $secondaryColor;
+  transition-duration: 0.3s;
+
+  .item-list {
+    display: flex;
+    column-gap: 0.5rem;
+  }
+
+  &:hover {
+    color: $primaryColor;
+    transition-duration: 0.3s;
+    cursor: pointer;
+  }
+}
+
+.selected-menu {
+  color: $primaryColor;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}

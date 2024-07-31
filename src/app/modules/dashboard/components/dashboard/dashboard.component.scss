@@ -1,7 +1,7 @@
 @import "../../../../shared/theme/default-styles.scss";
 
 .body-container {
-  padding: 0px 10rem;
+  padding: 0 8rem;
 
   .header {
     margin-top: 1.3rem;
@@ -11,9 +11,59 @@
       align-items: center;
       column-gap: 0.5rem;
 
+      i {
+        cursor: pointer;
+      }
+
       .header-title {
         font-size: $fontSizeMedium;
         color: $secondaryColor;
+      }
+    }
+  }
+
+  .body-content {
+    display: flex;
+    flex: 1;
+
+    .sidenav {
+      padding: 1rem;
+
+      .header-sidenav {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        row-gap: 3px;
+
+        i {
+          font-size: 2.5rem;
+          color: $primaryColor;
+          margin-bottom: 0.5rem;
+        }
+
+        .desc {
+          font-weight: bold;
+          color: $secondaryColor;
+          font-size: $fontSizeLarge;
+        }
+
+        .sub-desc {
+          font-weight: 300;
+          font-size: $fontSizeMedium;
+        }
+      }
+    }
+
+    .content {
+      flex: 1;
+      padding: 1rem;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+
+      .button {
+        width: 312px;
       }
     }
   }
@@ -26,5 +76,9 @@
 
   .header-content {
     margin-left: 1rem;
+  }
+
+  .sidenav {
+    display: none;
   }
 }

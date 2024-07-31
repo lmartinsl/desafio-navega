@@ -12,17 +12,17 @@ import { InputTextModule } from 'primeng/inputtext';
 import { AppService } from 'src/app/app.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 
+const PRIMENG = [InputMaskModule, InputTextModule, ButtonModule];
+
 @NgModule({
   declarations: [LoginComponent],
   imports: [
+    ...PRIMENG,
     CommonModule,
     RouterModule,
     LoginRoutingModule,
-    InputTextModule,
-    ButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    InputMaskModule,
     SharedModule,
   ],
   providers: [AppService],
