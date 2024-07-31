@@ -1,0 +1,30 @@
+@import "../../../../shared/theme/default-styles.scss";
+
+.body-container {
+  padding: 0px 10rem;
+
+  .header {
+    margin-top: 1.3rem;
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+
+      .header-title {
+        font-size: $fontSizeMedium;
+        color: $secondaryColor;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobileWidth) {
+  .body-container {
+    padding: 0px;
+  }
+
+  .header-content {
+    margin-left: 1rem;
+  }
+}

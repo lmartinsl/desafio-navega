@@ -1,0 +1,124 @@
+@import "../../../../shared/theme/default-styles.scss";
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+
+  @media (min-width: $mobileWidth) {
+    flex-direction: row;
+  }
+
+  .login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: auto;
+
+    img {
+      width: 124px;
+      margin-bottom: 5rem;
+    }
+
+    .desc {
+      font-weight: bold;
+      color: $secondaryColor;
+      font-size: $fontSizeLarge;
+      text-align: center;
+    }
+
+    .sub-desc {
+      font-weight: 300;
+      color: $secondaryColor;
+      margin: 1rem 0;
+      font-size: $fontSizeMedium;
+      text-align: center;
+      padding: 0 1rem;
+
+      a {
+        color: $primaryColor;
+        cursor: pointer;
+      }
+    }
+
+    .sub-version {
+      font-size: $fontSizeSmall;
+      color: $secondaryColor;
+    }
+
+    @media (min-width: $mobileWidth) {
+      align-items: center;
+      justify-content: center;
+      width: 21rem;
+    }
+
+    form {
+      width: 100%;
+
+      .input-container {
+        position: relative;
+        margin-bottom: 1.5rem;
+
+        h5 {
+          margin-bottom: 0.5rem;
+          font-size: $fontSizeMedium;
+          font-weight: 500;
+          color: $secondaryColor;
+        }
+
+        .custom-input {
+          width: 100%;
+          border: none;
+          border-bottom: 2px solid $borderColor;
+          outline: none;
+          border-radius: 0;
+          padding-right: 2rem;
+        }
+
+        .custom-icon {
+          position: absolute;
+          top: 3rem;
+          right: 0.5rem;
+          transform: translateY(-50%);
+          cursor: pointer;
+          color: $secondaryColor;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .login-image {
+    display: none;
+    position: relative;
+
+    .background-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .overlay-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: auto;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $mobileWidth) {
+    .login-image {
+      display: block;
+      width: 60%;
+      height: 100%;
+    }
+  }
+}

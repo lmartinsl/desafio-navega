@@ -1,0 +1,35 @@
+@import '../../../shared/theme/default-styles.scss';
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10rem;
+  background-color: #21232a;
+  color: #fff;
+  height: 80px;
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+  }
+}
+
+@media (max-width: $mobileWidth) {
+  .app-header {
+    display: none;
+  }
+}

@@ -1,0 +1,90 @@
+<div class="login-container">
+  <div class="login-content">
+    <img src="../../../../../assets/images/logo.png" alt="Logo" />
+    <span class="desc">Boas-vindas ao Portal!</span>
+    <span class="desc">Para começar, qual seu email ou CPF?</span>
+    <span class="sub-desc">
+      Precisamos desta confirmação para dar início ao seu acesso.
+    </span>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="input-container">
+        <h5>Email ou CPF</h5>
+        <input
+          type="text"
+          pInputText
+          class="custom-input"
+          formControlName="emailOrCpf"
+        />
+        <i
+          *ngIf="
+            loginForm.get('emailOrCpf')?.valid &&
+            loginForm.get('emailOrCpf')?.touched
+          "
+          class="pi pi-check-circle custom-icon"
+        ></i>
+        <div
+          *ngIf="
+            loginForm.get('emailOrCpf')?.invalid &&
+            loginForm.get('emailOrCpf')?.touched
+          "
+        >
+          <small *ngIf="loginForm.get('emailOrCpf')?.errors?.['required']"
+            >Campo obrigatório.</small
+          >
+          <small
+            *ngIf="loginForm.get('emailOrCpf')?.errors?.['invalidEmailOrCpf']"
+            >Email ou CPF inválido.</small
+          >
+        </div>
+      </div>
+      <div class="input-container">
+        <h5>Senha</h5>
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          pInputText
+          class="custom-input"
+          formControlName="password"
+        />
+        <i
+          [ngClass]="showPassword ? 'pi pi-eye-slash' : 'pi pi-eye'"
+          class="custom-icon"
+          (click)="togglePasswordVisibility()"
+        ></i>
+        <div
+          *ngIf="
+            loginForm.get('password')?.invalid &&
+            loginForm.get('password')?.touched
+          "
+        >
+          <small *ngIf="loginForm.get('password')?.errors?.['required']"
+            >Campo obrigatório.</small
+          >
+          <small *ngIf="loginForm.get('password')?.errors?.['minlength']"
+            >A senha deve ter no mínimo 6 caracteres.</small
+          >
+        </div>
+      </div>
+      <button
+        appFillButton
+        [disabled]="loginForm.invalid"
+        pButton
+        type="submit"
+      >
+        ACESSAR
+      </button>
+    </form>
+    <span class="sub-desc"> Esqueceu a senha? <a>Acesse aqui</a> </span>
+    <span class="sub-version">Versão 0.01</span>
+  </div>
+  <div class="login-image">
+    <img
+      src="../../../../../assets/images/background-login.jpg"
+      class="background-image"
+    />
+    <img
+      src="../../../../../assets/images/sub-background-login.png"
+      alt="Overlay Image"
+      class="overlay-image"
+    />
+  </div>
+</div>
