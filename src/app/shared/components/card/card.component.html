@@ -1,0 +1,15 @@
+<ng-container *ngIf="icon && title">
+  <p-card class="card">
+    <div class="card-header">
+      <div class="card-header-title">
+        <i class="pi {{ icon }}"></i>
+        <span>{{ title }}</span>
+      </div>
+      <i class="pi pi-chevron-right"></i>
+    </div>
+    <p-divider></p-divider>
+    <div class="card-content">
+      <ng-content></ng-content>
+    </div>
+  </p-card>
+</ng-container>

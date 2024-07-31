@@ -19,9 +19,44 @@
     </section>
 
     <section class="content">
-      ...Conteúdo
+      <app-card [title]="'Contribuição mensal'" [icon]="'pi-database'">
+        <div class="card-content">
+          <div>
+            <div class="content-values">
+              <span class="label">Valor da contribuição</span>
+              <span class="value">R$ 500,00</span>
+            </div>
+            <div class="content-values">
+              <span class="label">Porcentagem do salário</span>
+              <span class="value">5%</span>
+            </div>
+          </div>
+          <div class="button-card">
+            <button appFillButton pButton type="submit">
+              ALTERAR CONTRIBUIÇÃO
+            </button>
+          </div>
+        </div>
+      </app-card>
+
+      <app-card [title]="'Contribuição voluntária'" [icon]="'pi-database'">
+        <div class="card-content">
+          <div class="content-values">
+            <span class="label">Valor da contribuição</span>
+            <span class="value">R$ 500,00</span>
+          </div>
+          <div class="button-card">
+            <button appFillButton pButton type="submit">
+              ALTERAR CONTRIBUIÇÃO
+            </button>
+          </div>
+        </div>
+      </app-card>
+
       <div class="button">
-        <button appFillButton pButton type="submit">INCLUIR CONTRIBUIÇÃO</button>
+        <button appFillButton pButton type="submit">
+          INCLUIR CONTRIBUIÇÃO
+        </button>
       </div>
     </section>
   </div>

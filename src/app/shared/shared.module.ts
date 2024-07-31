@@ -5,10 +5,12 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FillButtonDirective } from './directives/fill-button.directive';
 
+import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
+import { CardComponent } from './components/card/card.component';
 
-const PRIMENG = [DividerModule]
-const COMPONENTS = [SidebarComponent, SidenavComponent];
+const PRIMENG = [DividerModule, CardModule];
+const COMPONENTS = [SidebarComponent, SidenavComponent, CardComponent];
 const DIRECTIVES = [FillButtonDirective];
 
 @NgModule({
