@@ -1,19 +1,16 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  isLogin: Observable<boolean>;
 
-  isLogin = this._appService.getLogin();
-
-  constructor(private router: Router, private _appService: AppService) {}
-
-  isLoginRoute(): boolean {
-    return this.router.url === '/login';
+  constructor(private _appService: AppService) {
+    this.isLogin = this._appService.getLogin();
   }
 }

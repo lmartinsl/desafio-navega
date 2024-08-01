@@ -1,2 +1,2 @@
-<app-sidebar *ngIf="!isLoginRoute() && (isLogin | async)"></app-sidebar>
+<app-sidebar *ngIf="isLogin | async"></app-sidebar>
 <router-outlet></router-outlet>

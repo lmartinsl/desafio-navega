@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { LoginComponent } from './components/login/login.component';
 import { LoginRoutingModule } from './login-routing.module';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
@@ -25,6 +25,6 @@ const PRIMENG = [InputMaskModule, InputTextModule, ButtonModule];
     ReactiveFormsModule,
     SharedModule,
   ],
-  providers: [AppService],
+  providers: [AppService, FormBuilder, Router],
 })
 export class LoginModule {}

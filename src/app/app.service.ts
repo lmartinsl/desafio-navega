@@ -5,7 +5,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AppService {
-  private isLogin: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  private isLogin: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
+    false
+  );
 
   constructor() {}
 

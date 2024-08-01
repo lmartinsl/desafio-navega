@@ -19,6 +19,26 @@
     </section>
 
     <section class="content">
+      <div class="chart">
+        <p-chart type="doughnut" [data]="data" [options]="options"></p-chart>
+        <div class="legend">
+          <div
+            *ngFor="let item of legendData"
+            class="legend-item"
+            [ngStyle]="{ color: item.backgroundColor }"
+          >
+
+          <div class="legend-item-group">
+            <div class="group-label">
+              <div [ngStyle]="{ backgroundColor: item.backgroundColor }" class="legend-item-group-circle"></div>
+              <span class="legend-item-group-label">{{ item.label }}</span>           
+            </div>
+            <span class="legend-item-group-value">{{ item.data }}</span>           
+          </div>
+          </div>
+        </div>
+      </div>
+
       <app-card [title]="'Contribuição mensal'" [icon]="'pi-database'">
         <div class="card-content">
           <div>
