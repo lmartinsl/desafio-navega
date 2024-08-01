@@ -1,27 +1,37 @@
 # DesafioNavega
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 14.1.0.
 
-## Development server
+## Servidor de Desenvolvimento
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Execute `ng serve` para iniciar um servidor de desenvolvimento. Navegue até `http://localhost:4200/`. A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos de origem.
 
-## Code scaffolding
+## Scaffold de Código
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Execute `ng generate component component-name` para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Execute `ng build` para construir o projeto. Os artefatos da build serão armazenados no diretório `dist/`.
 
-## Running unit tests
+## Execução de Testes Unitários
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute `ng test` para executar os testes unitários através do [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Execução de Testes End-to-End
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Execute `ng e2e` para executar os testes end-to-end através de uma plataforma de sua escolha. Para usar este comando, você precisa primeiro adicionar um pacote que implemente capacidades de teste end-to-end.
 
-## Further help
+## Detalhes do Projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Este projeto refere-se a um teste case para uma oportunidade de desenvolvedor front-end Angular nível pleno/sênior. Inclui criação de componentes stateless, uso do RxJS, lazy-loading, operadores RxJS e outras particularidades do Angular.
+
+## Versões Utilizadas
+
+- `@angular/cli`: ~14.1.0
+- `primeicons`: ^7.0.0
+- `primeng`: ^14.2.3
+
+## Criador
+
+Lucas Martins Lima - Desenvolvedor Front-end Angular Sênior
